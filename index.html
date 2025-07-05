@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario con Validación Dinámica</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Formulario de Registro</h1>
+    <form id="formulario">
+      <div class="campo">
+        <label for="nombre">👤 Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required />
+        <span class="error" id="errorNombre"></span>
+      </div>
+
+      <div class="campo">
+        <label for="email">📧 Correo Electrónico</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required />
+        <span class="error" id="errorEmail"></span>
+      </div>
+
+      <div class="campo">
+        <label for="password">🔒 Contraseña</label>
+        <input type="password" id="password" name="password" placeholder="********" required />
+        <span class="error" id="errorPassword"></span>
+      </div>
+
+      <div class="campo">
+        <label for="confirmPassword">🔒 Confirmar Contraseña</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="********" required />
+        <span class="error" id="errorConfirmPassword"></span>
+      </div>
+
+      <div class="campo">
+        <label for="edad">🎂 Edad</label>
+        <input type="number" id="edad" name="edad" placeholder="18 o más" required />
+        <span class="error" id="errorEdad"></span>
+      </div>
+
+      <div class="botones">
+        <button type="submit" id="btnEnviar" disabled>✅ Enviar</button>
+        <button type="reset">♻️ Reiniciar</button>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
